@@ -1,15 +1,20 @@
 #include<stdio.h>
 int main(){
-    in n,reversed=0,remainder;
+    int n,product=1,digit;
     printf("Enter a number:");
     scanf("%d",&n);
-    while(n!=0){
-        remainder=n%10;
-        reversed=reversed*10+remainder;
-        n/=10;
+    if(n==0){
+        printf("Product of digits in %d is 0",n);
+    }
+    
+     while(n!=0){
+            digit=n%10;
+            product*=digit;
+            n/=10;
     }
 
-    printf("Reversed number is %d",reversed);
+    printf("Product of digits in %d is %d",n,product);
     return 0;
-
-}
+ }
+    
+    
